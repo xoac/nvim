@@ -117,6 +117,7 @@ sudo pacman -S ripgreap \ # for telescope
     tar curl \ # nvim-treesitter
 
 pamac build stylua-bin
+go install github.com/lighttiger2505/sqls  # for SQL support with LSP (need configuration file in $HOME/.config/config.yml)
 ```
 
 LSPs:
