@@ -47,5 +47,4 @@ require("packer.plugs.twilight") -- dims inactive portions of the code you're ed
 require("packer.plugs.formatter") -- format buffers
 require("packer.plugs.comment") -- Smart and Powerful commenting
 require("packer.plugs.renamer") -- Visual-Studio-Code-like renaming UI for Neovim
-require("packer.plugs.luasnip") -- snippets
 packer.use({ "godlygeek/tabular" }) -- Allow easy align text with special char

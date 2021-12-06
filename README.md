@@ -115,6 +115,8 @@ __There can be more binaries that are required but some could be installed__
 ```bash
 sudo pacman -S ripgreap \ # for telescope
     tar curl \ # nvim-treesitter
+
+pamac build stylua-bin
 ```
 
 LSPs:
