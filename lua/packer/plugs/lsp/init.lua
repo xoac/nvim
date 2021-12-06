@@ -18,6 +18,7 @@ packer.use({
 			end,
 		}, -- Snippets plugin
 		{ "hrsh7th/cmp-nvim-lsp" }, -- source for different languages
+		{ "hrsh7th/cmp-path" }, -- file system path completion
 	},
 	config = function()
 		local lspkind = require("lspkind")
@@ -60,6 +61,7 @@ packer.use({
 			sources = {
 				{ name = "nvim_lsp" },
 				{ name = "luasnip" },
+				{ name = "path" },
 			},
 		})
 	end,
