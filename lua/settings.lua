@@ -1,5 +1,5 @@
 -- tabs and intends
-vim.cmd("set ts=4") -- Insert 2 spaces for a tab
+vim.cmd("set ts=4") -- Insert 4 spaces for a tab
 vim.cmd("set sw=4") -- Change the number of space characters inserted for indentation
 vim.cmd("set expandtab") -- Converts tabs to spaces
 vim.o.showtabline = 2 -- Always show tabs
@@ -13,7 +13,7 @@ vim.o.cmdheight = 2 -- More space for displaying messages
 vim.o.mouse = "a" -- Enable your mouse, line number not selectable by mouse
 vim.o.splitbelow = true -- Horizontal splits will be automatily below
 
-vim.o.updatetime = 300 -- faster codompletion
+vim.o.updatetime = 300 -- faster code completion
 
 vim.opt.termguicolors = true
 

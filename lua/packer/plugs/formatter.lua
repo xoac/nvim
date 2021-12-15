@@ -1,6 +1,6 @@
 packer.use({
 	"mhartington/formatter.nvim",
-	config = function()
+    config = function()
 		require("formatter").setup({
 			filetype = {
 				rust = {

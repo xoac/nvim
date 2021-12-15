@@ -7,6 +7,7 @@ packer.use({
 		vim.cmd([[highlight IndentHighlightListBlank3 guifg=#98C379 gui=nocombine]])
 		vim.cmd([[highlight IndentHighlightListBlank4 guifg=#56B6C2 gui=nocombine]])
 		vim.cmd([[highlight IndentHighlightListBlank5 guifg=#61AFEF gui=nocombine]])
+
 		vim.cmd([[highlight IndentHighlightListBlank6 guifg=#C678DD gui=nocombine]])
 
 		vim.opt.termguicolors = true
@@ -16,8 +17,10 @@ packer.use({
 		vim.cmd([[highlight IndentBlanklineIndent4 guibg=#262933 gui=nocombine]])
 
 		vim.opt.list = true
-		-- vim.opt.listchars:append("space:—")
-		vim.opt.listchars:append("eol:↴")
+		vim.opt.listchars:append("tab:|>")
+		vim.opt.listchars:append("eol:$")
+		vim.opt.listchars:append("trail:•")
+		-- vim.opt.listchars:append("space:·") -- use space as blank
 
 		require("indent_blankline").setup({
 			space_char_blankline = " ",
@@ -36,6 +39,7 @@ packer.use({
 				"IndentBlanklineIndent3",
 				"IndentBlanklineIndent4",
 			},
+
 			show_trailing_blankline_indent = false,
 		})
 	end,
