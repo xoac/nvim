@@ -2,15 +2,56 @@
 
 This is my nvim configuration. I use it to work with **rust** and **go lang** programs (LSP). But highlight works for all maintained languages with tree-sitter. It should be easy to add new languages.
 
+![Screenshot](./screenshot.png)
+
 ## Installation
 
+### Requirements
+
+__There can be more binaries that are required but some could be installed already in my OS use `checkhealth`__
+
+<details>
+  <summary>Arch-linux based systems</summary>
+
+```sh
+sudo pacman -S ripgreap \ # for telescope
+    tar curl \ # nvim-treesitter
+
+pamac build stylua-bin
+go install github.com/lighttiger2505/sqls  # for SQL support with LSP (need configuration file in $HOME/.config/config.yml)
 ```
-git clone 
+
+LSPs:
+```sh
+sudo pacman -S \
+    lua-language-serve \
+	rust-analyzer rust \
+    go gopls revive \ # golang
+	
 ```
+</details>
+
+<details>
+  <summary>Ubunut based systems</summary>
+
+TODO
+</details>
+
+### Plugins
+
+Download neovim configuration:
+```sh
+git clone https://github.com/xoac/nvim ~/.config/
+```
+
+Next you need to run `nvim` (you got some errors) and then `:PackerSync`. Unfortunately you need to close `nvim` and repeat procedure until you are out of errors (this is bug).
 
 ## Structure
 
 This configuration uses a different approach than the standard ones. Most of them have a struct of files like this:
+<details>
+  <summary> Standard structure </summary>
+
 ```
 ├── init.lua
 ├── lua
@@ -59,8 +100,14 @@ This configuration uses a different approach than the standard ones. Most of the
 │   ├── settings.lua
 │   └── terminal.lua
 ```
+</details>
+<br/>
 
-My approach should be simpler, and looks like this:
+**My approach should be simpler, and looks like this:**
+
+<details> 
+  <summary>One plugin one file approach</summary>
+
 ```
 ├── init.lua
 ├── lua
@@ -91,6 +138,8 @@ My approach should be simpler, and looks like this:
 │   │       └── windline.lua
 │   └── settings.lua
 ```
+</details>
+</br>
 
 **The rules are:**
 1. In `lua/packer/plugs/init.lua` - one line, one plugin
@@ -100,35 +149,20 @@ My approach should be simpler, and looks like this:
     - `packer` with global variable `packer` - used to add more plugins
     - `which-key` that should be accessed with `local wk = require("which-key")` and this is suggested way to add new key mapping
 
-**Example benefits of this approach:**
-    - disable one plugin with all settings and key mapping, all you need is to comment one line in `/lua/packer/plugs/init.lua`
-    - conflict key mapping you can check with `checkhealth which-key`
-    - if you want modify plugin settings you only look in one file.
-    - should be simpler for beginners 
 
-## Requirements
+**Example benefits of this approach**:
+  - disable one plugin with all settings and key mapping, all you need is to comment one line in `/lua/packer/plugs/init.lua`
+  - conflict key mapping you can check with `checkhealth which-key`
+  - if you want modify plugin settings you only look in one file.
+  - should be simpler for beginners 
 
-__There can be more binaries that are required but some could be installed__
+### Credits
 
-## Arch-linux based systems:
+I was looking for inspiration in this repositories:
 
-```bash
-sudo pacman -S ripgreap \ # for telescope
-    tar curl \ # nvim-treesitter
+ - https://github.com/MiaadTeam/lesvim
+ - https://github.com/jonhoo/configs
 
-pamac build stylua-bin
-go install github.com/lighttiger2505/sqls  # for SQL support with LSP (need configuration file in $HOME/.config/config.yml)
-```
+### Contribiution
 
-LSPs:
-```bash
-sudo pacman -S \
-    lua-language-serve \
-	rust-analyzer rust \
-    go gopls revive \ # golang
-	
-```
-
-## Ubunut based systems:
-
-TODO
+Feel free to open PR or issue.
