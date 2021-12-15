@@ -1,6 +1,6 @@
 packer.use({
-	"akinsho/bufferline.nvim",
-	requires = "kyazdani42/nvim-web-devicons",
+    "akinsho/bufferline.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
 })
 
 require("bufferline").setup({})
@@ -8,6 +8,6 @@ require("bufferline").setup({})
 local wk = require("which-key")
 
 wk.register({
-	["[b"] = { ":BufferLineCycleNext<CR>", "Next buffer" },
-	["]b"] = { ":BufferLineCyclePrev<CR>", "Prev buffer" },
+    ["[b"] = { ":BufferLineCycleNext<CR>", "Next buffer" },
+    ["]b"] = { ":BufferLineCyclePrev<CR>", "Prev buffer" },
 })

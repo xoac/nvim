@@ -13,11 +13,9 @@ require("packer.plugs")
 -- Key Mappings
 -- require("keymap")
 
-
 -- Load settings for LSP
 -- require("lsp")
 
 --[[
 --   UI
 --]]
-
