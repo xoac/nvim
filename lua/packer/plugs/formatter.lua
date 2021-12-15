@@ -1,6 +1,6 @@
 packer.use({
 	"mhartington/formatter.nvim",
-    config = function()
+	config = function()
 		require("formatter").setup({
 			filetype = {
 				rust = {
@@ -16,7 +16,7 @@ packer.use({
 				lua = {
 					function()
 						return {
-							exe = "stylua",
+							exe = "stylua --indent-type Spaces",
 							stdin = false,
 						}
 					end,
