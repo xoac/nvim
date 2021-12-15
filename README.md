@@ -16,6 +16,7 @@ __There can be more binaries that are required but some could be installed alrea
 ```sh
 sudo pacman -S ripgreap \ # for telescope
     tar curl \ # nvim-treesitter
+    community/wl-clipboard # allow copy/past to `+` register (system) on Wayland
 
 pamac build stylua-bin
 go install github.com/lighttiger2505/sqls  # for SQL support with LSP (need configuration file in $HOME/.config/config.yml)
