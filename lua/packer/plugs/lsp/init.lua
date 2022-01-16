@@ -64,6 +64,7 @@ packer.use({
                 { name = "luasnip" },
                 { name = "path" },
                 { name = "buffer" },
+                { name = "crates" }, -- FIXME this should only load for Cargo.toml files and should be in rust.lua file
             },
         })
     end,
