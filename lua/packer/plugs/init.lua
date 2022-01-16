@@ -24,6 +24,8 @@ require("packer.plugs.lsp") -- load lsp config and supported languages
 -- Tools
 --]]
 
+packer.use({ "ciaranm/securemodelines" })
+packer.use({ "editorconfig/editorconfig-vim" })
 require("packer.plugs.telescope") -- is a highly extendable fuzzy finder over lists
 require("packer.plugs.gitsigns") -- Super fast git decorations
 --[[
