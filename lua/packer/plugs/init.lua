@@ -42,6 +42,7 @@ require("packer.plugs.nvim-treesitter") -- Tree-sitter is a parser generator too
 require("packer.plugs.bufferline") -- buffer line (with minimal tab integration)
 require("packer.plugs.windline") -- statusline
 require("packer.plugs.twilight") -- dims inactive portions of the code you're editing.
+require("packer.plugs.pretty-fold") -- folding
 
 --[[
 ---- General any lang tools
