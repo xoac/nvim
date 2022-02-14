@@ -69,6 +69,16 @@ packer.use({
 })
 -- Additional textobjects for treesitter
 packer.use("nvim-treesitter/nvim-treesitter-textobjects")
+packer.use("IndianBoy42/tree-sitter-just")
+
+require("nvim-treesitter.parsers").get_parser_configs().just = {
+    install_info = {
+        url = "https://github.com/IndianBoy42/tree-sitter-just", -- local path or git repo
+        files = { "src/parser.c", "src/scanner.cc" },
+        branch = "main",
+    },
+    maintainers = { "@IndianBoy42" },
+}
 
 vim.cmd("set foldmethod=expr")
 vim.cmd("set foldexpr=nvim_treesitter#foldexpr()")
